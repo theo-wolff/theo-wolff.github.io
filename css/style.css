@@ -60,6 +60,7 @@ img {
 }
 
 strong { font-weight: var(--fw-bold) }
+.strong__text{color: #e63946;}
 
 :focus {
     outline: 3px solid var(--clr-accent);
@@ -130,8 +131,11 @@ h3 { font-size: var(--fs-h3) }
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
+    text-align: center;
 }
 
+
+.section__title--work{text-align: center;}
 /* header */
 
 header {
@@ -321,7 +325,7 @@ header {
 }
 
 .services {
-    margin-bottom: 4em;
+    margin-bottom: 2em;
 }
 
 .service {
@@ -364,7 +368,7 @@ header {
         grid-template-areas: 
             "title img"
             "subtitle img"
-            "text img";
+            "text img";     
         grid-column-gap: 2em;
     }
     
@@ -448,6 +452,7 @@ header {
     text-align: center;
     padding: 2.5em 0;
     font-size: var(--fs-h3);
+    margin: 2.5em auto;
 
 }
 

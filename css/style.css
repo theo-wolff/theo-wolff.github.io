@@ -294,6 +294,66 @@ header {
 
 
 
+
+/* about me */
+
+.about-me {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    /* max-width: 1000px; */
+    margin: 0 auto;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.about-me__img {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "text img";     
+        grid-column-gap: 2em;
+    }
+    
+    .section__title--about {
+        grid-area: title;
+    }
+    
+    .section__subtitle--about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+    }
+    
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+/* My CV */
+
+.my-cv{
+    margin: 1em auto;
+    background-size: cover;
+    text-align: center;
+}
+
+.section__title--cv{
+    margin-bottom: 1em;
+}
+
 /*  My services section  */
 
 .my-services {
@@ -346,53 +406,42 @@ header {
     }
 }
 
-/* about me */
+/* My skills */
 
-.about-me {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
-    /* max-width: 1000px; */
+.my-skills{
+    text-align: center;
+}
+
+.section__title--skills {
+    color: var(--clr-dark);
+    position: relative;
+}
+
+.section__subtitle--skills{
+    margin-bottom: 1.5em;
+}
+
+.section__title--skills::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto;
+    background: var(--clr-dark);
+    opacity: 0.25;
+}
+
+.skills{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
+    font-size: 70px;
+}
+
+.img__skills{
+    width: 70px;
+    height: 70px;
     margin: 0 auto;
-    padding-left: 10%;
-    padding-right: 10%;
 }
-
-.about-me__img {
-    box-shadow: var(--bs);
-}
-
-@media (min-width: 600px) {
-    .about-me {
-        display: grid;
-        grid-template-columns: 1fr 250px;
-        grid-template-areas: 
-            "title img"
-            "subtitle img"
-            "text img";     
-        grid-column-gap: 2em;
-    }
-    
-    .section__title--about {
-        grid-area: title;
-    }
-    
-    .section__subtitle--about {
-        grid-column: 1 / -1;
-        grid-row: 2;
-        position: relative;
-        left: -1em;
-        width: calc(100% + 2em);
-        padding-left: 1em;
-        padding-right: calc(200px + 4em);
-    }
-    
-    .about-me__img {
-        grid-area: img;
-        position: relative;
-        z-index: 2;
-    }
-}
-
 /* My Work */
 
 .my-work {
@@ -490,6 +539,20 @@ header {
     padding: .5em;
 }
 
+/* scroll to top */
+
+.scroll_to_top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 30px;
+  }
+
+.scroll_to_top img {
+    width: 50px;
+  }
+  
 /* Individual portfolio item styles */
 
 .portfolio-item-individual {

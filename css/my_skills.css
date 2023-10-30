@@ -1,0 +1,36 @@
+/* My skills */
+
+.my-skills{
+    text-align: center;
+}
+
+.section__title--skills {
+    color: var(--clr-dark);
+    position: relative;
+}
+
+.section__subtitle--skills{
+    margin-bottom: 1.5em;
+}
+
+.section__title--skills::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto;
+    background: var(--clr-dark);
+    opacity: 0.25;
+}
+
+.skills{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
+    font-size: 70px;
+}
+
+.img__skills{
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+}

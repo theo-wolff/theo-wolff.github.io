@@ -6,14 +6,24 @@
         <title>My portfolio</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
-       
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
         <!-- Update these with your own fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
        
         <link rel="stylesheet" style="text/css" href="css/style.css" >
+        <link rel="stylesheet" style="text/css" href="css/header.css">
+        <link rel="stylesheet" style="text/css" href="css/footer.css">
+        <link rel="stylesheet" style="text/css" href="css/intro.css">
+        <link rel="stylesheet" style="text/css" href="css/about_me.css">
+        <link rel="stylesheet" style="text/css" href="css/my_services.css">
+        <link rel="stylesheet" style="text/css" href="css/my_skills.css">
+        <link rel="stylesheet" style="text/css" href="css/my_work.css">
+        <link rel="stylesheet" style="text/css" href="css/work_at_school.css">
         <script src="https://kit.fontawesome.com/04a9e98a37.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     </head>
     <body>
@@ -27,15 +37,20 @@
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link"><i class="fa-solid fa-house fa-spin"></i></a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">My Studies</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
                 </ul>
             </nav>
+            <script>
+                AOS.init();
+              </script>
         </header>
         
         <!-- Introduction -->
-        <section class="intro" id="home">
+        <section data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000" class="intro" id="home">
             <h1 class="section__title section__title--intro">
                 Hi, I am <strong>Théo Wolff</strong>
             </h1>
@@ -49,7 +64,7 @@
 
 
         <!-- About me -->
-        <section class="about-me" id="about">
+        <section data-aos="fade-up-right" class="about-me" id="about">
             <h2 class="section__title section__title--about">Who I am</h2>
             <p class="section__subtitle section__subtitle--about">Computer Science Engineer</p>
             
@@ -66,13 +81,13 @@
 
         <!-- My CV -->
 
-        <section class="my-cv">
+        <section data-aos="fade-up-right" class="my-cv">
             <h3 class="section__title section__title--cv">Download my CV here:</h3>
             <a href="images/CV_2023-10-28_Theo_Wolff.pdf" target="_blank" class="btn my__cv"> My CV</a>
         </section> 
         
         <!-- My services -->
-        <section class="my-services" id="services">
+        <section data-aos="fade-up-right" class="my-services" id="services">
             <h2 class="section__title section__title--services">My Studies</h2>
             <div class="services">
                 <div class="service">
@@ -93,7 +108,7 @@
         </section>
 
         <!-- My skills -->
-        <section class="my-skills">
+        <section data-aos="fade-up-right" class="my-skills">
             <h2 class="section__title section__title--skills">My Skills</h2>
             <p class="section__subtitle section__subtitle--skills">Some skills I acquired during my education and as a self-taught person.</p>
             <div class="skills">
@@ -106,10 +121,9 @@
         </section>
            
             <!-- My Work -->
-            <section class="my-work" id="work">
+            <section data-aos="fade-up-right" class="my-work" id="work">
                 <h2 class="section__title section__title--work">My work</h2>
-                <p class="section__subtitle section__subtitle--work">What I have done during my first year and my two years of preparatory classes
-                <br/> We can also find some personnal projects </p>
+                <p class="section__subtitle section__subtitle--work">What I have done during my first year and my two years of preparatory classes</p>
                 <div class="portfolio">
                     <!-- Portfolio item 01 -->
                     <a href="#" class="portfolio__item">
@@ -141,14 +155,27 @@
                     </a> 
 
                     <a href="#" class="portfolio__item">
-                        <img src="images/aideal-hwa-OYzbqk2y26c-unsplash.jpg" alt="" class="portfolio__img">
+                        <img src="images/robots.jpg" alt="" class="portfolio__img">
                         <div class="portfolio__text">
                             <h2 class="section__subtitle">Embedded Systems</h2>
                         </div>
                     </a> 
                     <!-- à recopier -->
                 </div>
+        </section>
 
+        <!-- My work_at_school -->
+        <section  data-aos="fade-up-right" class="work-at-school">
+            <h2 class="section__title section__title--work">Personnal work</h2>
+            <p class="section__subtitle section__subtitle--work">Personnal things i did on my own.</p>
+            <div class="work_at_school at_school_item">
+                <h3 class="section__title section__title--school">Coming soon</h3>
+                <p class="section__subtitle section__subtitle--school">Coming soon</p>
+                <img class="img__at-school" id="change-image" src="images/sidel.jpg" alt="Votre image">
+                
+            </div>
+            <button class="btn__at-school" onclick="changeImage()"><img src="images/right-arrow.png" alt="right arrow"></button>
+        </section>
         
         <!-- Footer -->
         <footer class="footer">

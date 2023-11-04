@@ -6,10 +6,20 @@
     color: var(--clr-light);  
 }
 
-.portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    position: relative;
+@media (min-width: 800px) {
+    .portfolio {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        position: relative;
+    }
+}
+
+@media (max-width: 800px) {
+    .portfolio {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        position: relative;
+    } 
 }
 
 .portfolio__item {

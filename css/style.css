@@ -159,7 +159,7 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .my__cv:hover {
-    rotate: 360deg;
+    rotate: 180deg;
 }
 
 

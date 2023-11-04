@@ -43,3 +43,21 @@ function changeImage() {
             count=0;
     }
   }
+
+
+window.onscroll = function() {fillOnScroll()};
+
+function fillOnScroll() {
+  var remplissagefr = document.getElementById("remplissagefr");
+  var remplissageall = document.getElementById("remplissageall");
+  var remplissageang = document.getElementById("remplissageang");
+  var scrollPos = document.documentElement.scrollTop;
+  var windowHeight = window.innerHeight;
+  var fullHeight = document.documentElement.scrollHeight;
+
+  if (scrollPos > fullHeight - windowHeight - 500) { // Vous pouvez ajuster la position de déclenchement ici
+    remplissagefr.style.width = "100%";
+    remplissageall.style.width = "40%";
+    remplissageang.style.width = "85%";
+  }
+}
